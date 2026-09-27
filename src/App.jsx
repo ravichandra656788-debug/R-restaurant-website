@@ -1,27 +1,25 @@
 import "./App.css";
-import {BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-
 import Home from "./pages/Home";
-import Matches from "./pages/Matches";
-import Booking from "./pages/Booking";
-import BookingHistory from "./pages/BookingHistory";
+import Menu from "./pages/Menu";
+import Reservation from "./pages/Reservation";
+import Reservations from "./pages/Reservations";
 
 function App() {
   return (
     <BrowserRouter>
-
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/matches" element={<Matches />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/history" element={<BookingHistory />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/reservations" element={<Reservations />} />
       </Routes>
-
     </BrowserRouter>
   );
 }
+
 export default App;
